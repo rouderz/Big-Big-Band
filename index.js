@@ -8,6 +8,10 @@ readStream.on('data', function(chunk) {
     const inputs = data.split('\n').filter(txt => txt != "")
 
     const parsedData = inputs.reduce((data, line, idx)=> {
+        if(parseFloat(line.substring(1).replace(',', '.')) > 1000){
+            console.log('Uno de los miembros de la banda sobrepaso el limite de gastos');
+            return ;
+        }
         if (Number.isInteger(Number(line)) && Number(line) !== 0){
             const newGroup = [
                 ...data.groups,
@@ -49,31 +53,3 @@ readStream.on('data', function(chunk) {
 
     console.log(minimumAmountByGroup)
 });
-//
-// const data = `
-// 3
-// $10,00
-// $20,00
-// $30,00
-// 4
-// $15,00
-// $15,01
-// $3,00
-// $3,01
-// 4
-// $15,00
-// $14,99
-// $3,00
-// $2,99
-// 4
-// $999,10
-// $999,10
-// $999,00
-// $999,10
-// 3
-// $100,01
-// $99,99
-// $99,99
-// 0
-// `
-
