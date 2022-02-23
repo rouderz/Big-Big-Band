@@ -15,7 +15,7 @@ yarn
 
 ```txt
 INPUT EXAMPLE
-3 <- number of trips
+3 <- band members
 $10,00 <- respective amounts with dollar sign
 $20,00
 $30,00
