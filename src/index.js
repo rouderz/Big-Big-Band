@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const readStream = fs.createReadStream(path.join(__dirname, '../Big-Big-Band') + '/band.txt', 'utf8');
+const readStream = fs.createReadStream(path.join('band.txt'), 'utf8');
 var data = ''
 readStream.on('data', function(chunk) {
     data += chunk;
