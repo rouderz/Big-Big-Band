@@ -49,5 +49,6 @@ OUTPUT
 ## Commands
 
 ```javascript 
-for execute the program in console write npm .
+for execute the program in console write node src/index.js [--path|path=file location]
+
 ```
