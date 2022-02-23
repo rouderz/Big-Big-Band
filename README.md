@@ -12,9 +12,9 @@ yarn
 ```
 
 ## The file txt  should have this structure
+### INPUT EXAMPLE
 
 ```txt
-INPUT EXAMPLE
 3 <- band members
 $10,00 <- respective amounts with dollar sign
 $20,00
@@ -41,8 +41,8 @@ $99,99
 0
 ```
 
+### OUTPUT
 ```txt
-OUTPUT
 [ 10, 11.99, 12.01, 0.07, 0.02 ]
 ```
 
